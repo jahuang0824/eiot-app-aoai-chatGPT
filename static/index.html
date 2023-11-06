@@ -12,7 +12,10 @@
     <script type="text/javascript">
         function wait_loaded (count) {
             if ( $("._chatContainer_ry9lb_18").length > 0 ) {
-                alert('done');
+                console.log('done');
+
+                $("._chatContainer_ry9lb_18").before('<img src="assets/left.png" style="width:auto;height:auto;max-width:550px;max-height:550px;" />');
+                $("._chatContainer_ry9lb_18").after('<img src="assets/right.png" style="width:auto;height:auto;max-width:550px;max-height:550px;" />');
             } else {
                 console.log('wait...' + count);
                 setTimeout(wait_loaded.bind(null, count + 1), 1000);
@@ -25,9 +28,6 @@
             );
 
             wait_loaded(0);
-
-//            $("._chatContainer_ry9lb_18").before('<img src="assets/left.png" style="width:auto;height:auto;max-width:550px;max-height:550px;" />');
-//            $("._chatContainer_ry9lb_18").after('<img src="assets/right.png" style="width:auto;height:auto;max-width:550px;max-height:550px;" />');
         });
     </script>
   </head>
