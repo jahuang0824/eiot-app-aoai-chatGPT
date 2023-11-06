@@ -12,11 +12,10 @@
     <script type="text/javascript">
         function wait_loaded () {
             if ( $("._chatContainer_ry9lb_18").length > 0 ) {
-                console.log('done');
-
                 $("._chatContainer_ry9lb_18").before('<img src="assets/left.png" style="margin-top:100px;width:auto;height:auto;max-width:450px;max-height:450px;" />');
                 $("._chatContainer_ry9lb_18").after('<img src="assets/right.png" style="margin-top:100px;width:auto;height:auto;max-width:450px;max-height:450px;" />');
             } else {
+                console.log('waiting chatContainer element');
                 setTimeout(wait_loaded, 500);
             }
         }
